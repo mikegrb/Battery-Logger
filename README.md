@@ -22,9 +22,6 @@ What's Logged?
 
 The data file contains the following values, tab separated:
 
-CurrentCapacity MaxCapacity Pcnt CycleCount ExternalConnected IsCharging
-FullyCharged Temperature CellVoltage
-
 1. Timestamp, epoch format
 1. Current Capacity (Charge)
 1. Max Capacity (System Calculated Max Capacity)
