@@ -7,13 +7,15 @@ use warnings;
 
 my $datafile_path = '/Users/mgreb/Documents/data/battery.log';
 
-# We derrive Pcnt from CurrentCapacity & MaxCapacity
+# We derrive Pcnt from CurrentCapacity & MaxCapacity rest are properties for
+# AppleSmartBattery from ioreg
+
 my @logged = ( qw(
         CurrentCapacity MaxCapacity Pcnt CycleCount ExternalConnected IsCharging
         FullyCharged Temperature CellVoltage
 ) );
 
-# get data;
+# get data
 my %data;
 open( my $fh, '-|', '/usr/sbin/ioreg', '-rc', 'AppleSmartBattery' )
     or die "Couldn't run ioreg: $!";
