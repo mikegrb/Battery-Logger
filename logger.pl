@@ -1,10 +1,9 @@
-#!/usr/bin/env perl
+#!/usr/bin/perl
 
 use 5.010;
 
 use strict;
 use warnings;
-use autodie;
 
 my $datafile_path = '/Users/mgreb/Documents/data/battery.log';
 
@@ -16,7 +15,8 @@ my @logged = ( qw(
 
 # get data;
 my %data;
-open( my $fh, '-|', '/usr/sbin/ioreg', '-rc', 'AppleSmartBattery' );
+open( my $fh, '-|', '/usr/sbin/ioreg', '-rc', 'AppleSmartBattery' )
+    or die "Couldn't run ioreg: $!";
 while ( my $line = <$fh> ) {
     if ( $line =~ m/"([^"]+)" = (.*)$/ ) {
         $data{$1} = $2;
@@ -32,6 +32,6 @@ $data{Pcnt}
     = sprintf( '%.2f', $data{CurrentCapacity} / $data{MaxCapacity} * 100 );
 
 # log it
-open ($fh, '>', $datafile_path);
+open( $fh, '>', $datafile_path ) or die "Couldn't open log file: $!";
 say $fh join( "\t", time, @data{@logged} );
-close ($fh);
+close($fh);
