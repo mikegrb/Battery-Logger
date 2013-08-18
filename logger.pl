@@ -32,6 +32,6 @@ $data{Pcnt}
     = sprintf( '%.2f', $data{CurrentCapacity} / $data{MaxCapacity} * 100 );
 
 # log it
-open( $fh, '>', $datafile_path ) or die "Couldn't open log file: $!";
+open( $fh, '>>', $datafile_path ) or die "Couldn't open log file: $!";
 say $fh join( "\t", time, @data{@logged} );
 close($fh);
