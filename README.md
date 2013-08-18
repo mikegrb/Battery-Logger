@@ -27,6 +27,7 @@ The data file contains the following values, tab separated:
 1. Max Capacity (System Calculated Max Capacity)
 1. Pcnt of Max Capacity Remaining (% Charge)
 1. Cycle Count
+1. Max Capacity / Design Capacity (Battery Health)
 1. External Power Connected? (1/0)
 1. Charging? (1/0)
 1. Fully Charged? (1/0)
