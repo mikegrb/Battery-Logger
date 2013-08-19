@@ -53,5 +53,5 @@ A sample gnuplot script is included for creating graphs.
 
 Here is a sample produced with it:
 
-![Sample Battery Graph](http://thegrebs.com/~michael/battery_health.png "Sample Battery Graph")
+![Sample Battery Graph](https://thegrebs.com/~michael/battery_health.png "Sample Battery Graph")
 
