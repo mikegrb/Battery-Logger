@@ -46,3 +46,12 @@ How much space does the log take?
 The entries in the sample above are 67 bytes.  There are ~525,600 minutes in a year.  That's about 35 MB per year.  All entries might not be exactly 61 bytes
 and some years have an extra 1,440 minutes so the end of year total will vary
 a bit but it should be in that ball park.
+
+Using the Data
+--------------
+A sample gnuplot script is included for creating graphs.
+
+Here is a sample produced with it:
+
+![Sample Battery Graph](http://thegrebs.com/~michael/battery_health.png "Sample Battery Graph")
+
