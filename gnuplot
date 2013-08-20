@@ -16,6 +16,6 @@ plot \
     "battery.log" using 1:6 t "Health (%)" lc rgb "blue", \
     "battery.log" using 1:10 t "Battery Temp (C)" lc rgb "red", \
     "battery.log" using 1:4 t "Charge (%)" lc rgb "gray", \
-    "battery.log" using 1:($7 == 1 ? 3 : 1/0) w l t "Plugged In?" lw 5 , \
+    "battery.log" using 1:($7 == 1 ? 4 : 1/0) w l t "Plugged In?" lw 5 , \
     "battery.log" using 1:($8 == 1 ? 2 : 1/0) w l t "Charging?" lw 5 lc rgb "orange", \
     "battery.log" using 1:($9 == 1 ? 2 : 1/0) w l t "Fully Charged?" lw 5 lc rgb "green"
