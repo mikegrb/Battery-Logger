@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+SCRIPTPATH=$( builtin cd $(dirname $0) ; pwd -P )
+
 source="$1"
 destination="$2"
 
@@ -8,5 +10,5 @@ if [[ -z "$source" || -z "$destination" ]] ; then
     exit 1
 fi
 
-gnuplot -e "source = '$source'" -e "destination = '$destination'" gnuplot
+gnuplot -e "source = '$source'" -e "destination = '$destination'" "$SCRIPTPATH/gnuplot"
 
