@@ -5,9 +5,9 @@ use 5.010;
 use strict;
 use warnings;
 
-my $datafile_path = '/Users/mgreb/Documents/data/battery.log';
+my $datafile_path = shift or die "Please specify the output file";
 
-# We derrive Pcnt from CurrentCapacity & MaxCapacity, LifePcnt from MaxCapacity
+# We derive Pcnt from CurrentCapacity & MaxCapacity, LifePcnt from MaxCapacity
 # and design capacity, rest are properties for AppleSmartBattery from ioreg
 
 my @logged = ( qw(
