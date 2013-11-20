@@ -55,5 +55,5 @@ If your gnuplot isn't in cron's path, you can provide a custom path as the third
 
 Here is a sample produced with it:
 
-![Sample Battery Graph](https://thegrebs.com/~michael/battery_health.png "Sample Battery Graph")
+![Sample Battery Graph](battery_health.png "Sample Battery Graph")
 
