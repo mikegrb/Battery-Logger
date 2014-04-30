@@ -37,7 +37,7 @@ What's the data look like?
 
 How much space does the log take?
 ---------------------------------
-The entries in the sample above are 67 bytes.  There are ~525,600 minutes in a year.  That's about 35 MB per year.  All entries might not be exactly 61 bytes
+The entries in the sample above are 67 bytes.  There are ~525,600 minutes in a year.  That's about 35 MB per year.  All entries might not be exactly 67 bytes
 and some years have an extra 1,440 minutes so the end of year total will vary
 a bit but it should be in that ball park.
 
